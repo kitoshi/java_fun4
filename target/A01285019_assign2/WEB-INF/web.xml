@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<context-param>
+		<param-name>db.driver</param-name>
+		<param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>db.url</param-name>
+		<param-value>jdbc:sqlserver://java-sql.ad.bcit.ca:1433;databaseName=jspweb;</param-value>
+	</context-param>
+	<context-param>
+		<param-name>db.user</param-name>
+		<param-value>javastudent</param-value>
+	</context-param>
+	<context-param>
+		<param-name>db.password</param-name>
+		<param-value>compjava</param-value>
+	</context-param>
+	<context-param>
+		<param-name>db.name</param-name>
+		<param-value>jspweb</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>GreetingServlet</servlet-name>
+		<servlet-class>ca.bcit.comp3601.assign2.servlet.GreetingServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DatabaseServlet</servlet-name>
+		<servlet-class>ca.bcit.comp3601.assign2.servlet.DatabaseServlet</servlet-class>
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>GreetingServlet</servlet-name>
+		<url-pattern>/A01285019_assign2/</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>A01285019_assign2/</welcome-file>
+	</welcome-file-list>
+
+</web-app>
